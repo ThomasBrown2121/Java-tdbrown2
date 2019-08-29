@@ -12,6 +12,27 @@ package edu.coloradomesa.cs310;
  * @author arizo
  */
 public class App {
+    
+        private String who;
+
+    /**
+     * Get the value of string
+     *
+     * @return the value of string
+     */
+    public String getwho() {
+        return who;
+    }
+
+    /**
+     * Set the value of string
+     *
+     * @param string new value of string
+     */
+    public void setwho(String who) {
+        this.who = who;
+    }
+
     private String greeting = "Hello";
     public String getGreeting(){
         return greeting;
@@ -26,7 +47,7 @@ public class App {
     }
     private void run() {
      String who = "World";
-     System.out.println(getGreeting() + " " + who + "!");
+     System.out.println(getGreeting() + " " + getwho() + "!");
      spin();
 // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
