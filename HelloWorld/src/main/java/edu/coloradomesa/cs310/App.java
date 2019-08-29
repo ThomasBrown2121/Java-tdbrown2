@@ -12,15 +12,21 @@ package edu.coloradomesa.cs310;
  * @author arizo
  */
 public class App {
+    private String greeting = "Hello";
+    public String getGreeting(){
+        return greeting;
+    }
+    public void setGreeting(String greeting){
+        this.greeting = greeting;
+    }
     public static void main(String [] args ) throws Exception {
         App app = new App();
         app.run();
         app.spin();
     }
-
     private void run() {
      String who = "World";
-     System.out.println("Hello" + who+ "!");
+     System.out.println(getGreeting() + " " + who + "!");
      spin();
 // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
