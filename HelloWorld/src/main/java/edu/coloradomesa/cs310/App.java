@@ -5,7 +5,7 @@
  */
 // https://github.com/ThomasBrown2121/Java-tdbrown2
 // Repo add Macevoy Assignment
-package com.mycompany.helloworld;
+package edu.coloradomesa.cs310;
 
 /**
  *
