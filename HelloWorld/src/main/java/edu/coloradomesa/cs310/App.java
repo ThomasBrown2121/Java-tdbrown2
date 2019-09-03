@@ -13,7 +13,7 @@ package edu.coloradomesa.cs310;
  */
 public class App {
     
-        private String who;
+        private String who = "thomas";
 
     /**
      * Get the value of string
@@ -32,7 +32,7 @@ public class App {
     public void setwho(String who) {
         this.who = who;
     }
-
+    
     private String greeting = "Hello";
     public String getGreeting(){
         return greeting;
@@ -43,16 +43,13 @@ public class App {
     public static void main(String [] args ) throws Exception {
         App app = new App();
         app.run();
-        app.spin();
     }
     private void run() {
      String who = "World";
      System.out.println(getGreeting() + " " + getwho() + "!");
-     spin();
-// throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    private void spin() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
+    public void spin(){
     }
 }
+
