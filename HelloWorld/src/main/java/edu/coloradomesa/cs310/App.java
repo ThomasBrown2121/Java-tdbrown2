@@ -50,6 +50,8 @@ public class App {
     }
     
     public void spin(){
+     String Rando = "Rando";
+        System.out.println(getGreeting() + " " + getwho() + "!");
     }
 }
 
