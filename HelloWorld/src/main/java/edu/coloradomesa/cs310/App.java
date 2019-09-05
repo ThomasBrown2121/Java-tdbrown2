@@ -13,7 +13,7 @@ package edu.coloradomesa.cs310;
  */
 public class App {
     
-        private String who = "thomas";
+        private String who = "World";
 
     /**
      * Get the value of string
@@ -31,27 +31,33 @@ public class App {
      */
     public void setwho(String who) {
         this.who = who;
+        this.message = null;
     }
     
     private String greeting = "Hello";
+    
     public String getGreeting(){
         return greeting;
     }
     public void setGreeting(String greeting){
         this.greeting = greeting;
+        this.message = null;
+    }
+    
+    private String message = null;
+    
+    public String getMessage(){
+        if(message == null){
+            message = getGreeting() + " " + getwho() + "!";
+        }
+        return message;
     }
     public static void main(String [] args ) throws Exception {
         App app = new App();
         app.run();
     }
     private void run() {
-     String who = "World";
-     System.out.println(getGreeting() + " " + getwho() + "!");
-    }
-    
-    public void spin(){
-     String Rando = "Rando";
-        System.out.println(getGreeting() + " " + getwho() + "!");
+     System.out.println(getMessage());
     }
 }
 

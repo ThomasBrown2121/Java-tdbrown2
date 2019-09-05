@@ -39,11 +39,9 @@ public class AppTest {
     public void testGetDefaultwho() {
         System.out.println("getwho");
         App instance = new App();
-        String expResult = "thomas";
+        String expResult = "World";
         String result = instance.getwho();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
     }
     @Test
  public void testGetnonDefaultwho() {
@@ -54,8 +52,6 @@ public class AppTest {
         String expResult = value;
         String result = instance.getwho();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
     }
     /**
      * Test of setwho method, of class App.
@@ -63,12 +59,14 @@ public class AppTest {
     
     public void testSetwho() {
         System.out.println("setwho");
-        String who = "";
-        App instance = new App();
-        instance.setwho(who);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String who = "Rando";
+        App app = new App();
+        app.setwho(who);
+        String expResult = who;
+        String result = app.getwho();
+        assertEquals(expResult,result);
     }
+        
 
     /**
      * Test of getGreeting method, of class App.
@@ -110,7 +108,7 @@ public class AppTest {
     }
 
     /**
-     * Test of getwho method, of class App.
+     * Test of get who method, of class App.
      */
     @Test
     public void testGetwho() {
@@ -122,19 +120,4 @@ public class AppTest {
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
-
-    /**
-     * Test of spin method, of class App.
-     */
-    @Test
-    public void testSpin() {
-        System.out.println("spin");
-        App instance = new App();
-        String expResult = "thomas";
-        String result = instance.getwho();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-    
 }
