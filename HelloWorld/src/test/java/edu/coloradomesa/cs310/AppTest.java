@@ -75,38 +75,27 @@ public class AppTest {
     public void testGetGreeting() {
         System.out.println("getGreeting");
         App instance = new App();
-        String expResult = "";
+        String expResult = "Hello";
         String result = instance.getGreeting();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
      * Test of setGreeting method, of class App.
      */
-    @org.junit.jupiter.api.Test
+    @Test
     public void testSetGreeting() {
         System.out.println("setGreeting");
-        String greeting = "";
+        String greeting = "Rando";
         App instance = new App();
         instance.setGreeting(greeting);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String result = instance.getGreeting();
+        String expResult = greeting;
+        assertEquals(expResult, result);
     }
 
-    /**
-     * Test of main method, of class App.
-     */
-    @org.junit.jupiter.api.Test
-    public void testMain() throws Exception {
-        System.out.println("main");
-        String[] args = null;
-        App.main(args);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
+  
     /**
      * Test of get who method, of class App.
      */
@@ -114,10 +103,8 @@ public class AppTest {
     public void testGetwho() {
         System.out.println("getwho");
         App instance = new App();
-        String expResult = " ";
+        String expResult = "World";
         String result = instance.getwho();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 }
