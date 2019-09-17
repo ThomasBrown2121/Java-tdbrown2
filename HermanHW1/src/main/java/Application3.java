@@ -8,28 +8,42 @@
  */
 import java.util.Scanner;
 import java.lang.Math;
+import java.io.PrintStream;
 
 /**
  *
  * @author Thomas Brown II
  */
 public class Application3 {
-    
-    public static void main(int num){
-        Application3 app = new Application3();
-        System.out.println("Please enter a positive integer <= 10,000");
+        int Radius;
+        double Euclidean, taxicab;
         Scanner S = new Scanner(System.in);
-        int Radius = S.nextInt();
-        System.out.println(app.Eucli(Radius) + "\n" + app.Taxicab(Radius));
+        PrintStream out = System.out;
+        
+        
+    public static void main(String[] args) throws Exception{
+        Application3 app = new Application3();
+        app.run();
     }
     
-    public double Eucli( int Radius){
-        double Euclidean = Math.PI*((Radius)*(Radius));
+    public double Eucli(){
+        Euclidean = Math.PI*((Radius)*(Radius));
         return Euclidean;
     }
     
-    public double Taxicab( int Radius){
-        double taxicab = 2 * Math.PI*(Radius)*(Radius);
+    public double Taxicab(){
+        taxicab = 2 * Math.PI*(Radius)*(Radius);
         return taxicab;
+    }
+    
+    void run(){
+        int Radius = S.nextInt();
+        Eucli();
+        Taxicab();
+        
+    }
+    
+    void write(){
+        out.printf("%f",Euclidean,taxicab);
     }
 }
