@@ -25,6 +25,21 @@ public class Application3Test {
         return app;
     }
     
+    Application3 ex2(){
+        Application3 app = new Application3();
+        app.Radius = 21;
+        app.Euclidean = 1385.442360;
+        app.taxicab = 882.000000;
+        return app;
+    }
+    
+    Application3 ex3(){
+        Application3 app = new Application3();
+        app.Radius = 42;
+        app.Euclidean = 5541.769441;
+        app.taxicab = 3528.000000;
+        return app;
+    }
     
     /**
      * Test of Eucli method, of class Application3.
@@ -32,6 +47,12 @@ public class Application3Test {
     @Test
     public void testEucli() {
         
+        
+        
+        
+        
+        
+        /////////////////////////
         System.out.println("Eucli");
         int Radius = 0;
         Application3 instance = new Application3();
@@ -46,14 +67,20 @@ public class Application3Test {
      */
     @Test
     public void testTaxicab() {
+        
+        
+        
+        
+        
+        
+        
+        /////////////////////////////
         System.out.println("Taxicab");
         int Radius = 0;
         Application3 instance = new Application3();
         double expResult = 0.0;
        // double result = instance.Taxicab(Radius);
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -61,11 +88,16 @@ public class Application3Test {
      */
     @Test
     public void testRun() {
+        
+        
+        
+        
+        
+        /////////////////////////
         System.out.println("run");
         Application3 instance = new Application3();
         instance.run();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -73,11 +105,17 @@ public class Application3Test {
      */
     @Test
     public void testWrite() {
+        
+        
+        
+        
+        
+        
+        ///////////////////////////
         System.out.println("write");
         Application3 instance = new Application3();
         instance.write();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
     
 }
