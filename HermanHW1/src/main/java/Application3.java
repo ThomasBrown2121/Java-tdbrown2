@@ -28,12 +28,10 @@ public class Application3 {
     
     public void Eucli(){
         this.Euclidean = Math.PI*((Radius)*(Radius));
-        //return Euclidean;
     }
     
     public void Taxicab(){
         this.taxicab = (Radius + Radius)*(Radius + Radius)/2;
-       // return taxicab;
     }
     
     void run(){
