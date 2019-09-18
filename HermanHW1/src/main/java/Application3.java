@@ -15,8 +15,8 @@ import java.io.PrintStream;
  * @author Thomas Brown II
  */
 public class Application3 {
-        int Radius;
-        double Euclidean, taxicab;
+        
+        double Euclidean, taxicab, Radius;
         Scanner S = new Scanner(System.in);
         PrintStream out = System.out;
         
@@ -26,24 +26,25 @@ public class Application3 {
         app.run();
     }
     
-    public double Eucli(){
-        Euclidean = Math.PI*((Radius)*(Radius));
-        return Euclidean;
+    public void Eucli(){
+        this.Euclidean = Math.PI*((Radius)*(Radius));
+        //return Euclidean;
     }
     
-    public double Taxicab(){
-        taxicab = 2 * Math.PI*(Radius)*(Radius);
-        return taxicab;
+    public void Taxicab(){
+        this.taxicab = (Radius + Radius)*(Radius + Radius)/2;
+       // return taxicab;
     }
     
     void run(){
-        int Radius = S.nextInt();
+        this.Radius = S.nextDouble();
         Eucli();
         Taxicab();
+        write();
         
     }
     
     void write(){
-        out.printf("%f",Euclidean,taxicab);
+        out.printf("%f \n%f",Euclidean,taxicab);
     }
 }
