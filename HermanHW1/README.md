@@ -6,7 +6,9 @@
          I had a run() function that ran the methods and outputed the correct calculations.
         To check my work I created test cases for Eucli() and Taxicab(). That compared the calculation to the expected answer.  
 ## Screenshot
-        ![TestResult.png](TestResult.png)
-        ![KattisSolution.png](KattisSolution.png)
+
+![TestResult.png](TestResult.png)
+
+![KattisSolution.png](KattisSolution.png)
         
 
