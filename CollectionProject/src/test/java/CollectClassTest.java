@@ -22,13 +22,34 @@ public class CollectClassTest {
     @Test
     public void testCompareAge() {
         System.out.println("compareAge");
-        Map<String, String> student = null;
-        Map<String, String> student2 = null;
         CollectClass instance = new CollectClass();
-        int expResult = 0;
-        int result = instance.compareAge(student, student2);
+        instance.student.put("YOB", "1990");
+        instance.student2.put("YOB", "2000");
+        int expResult = 1990;
+        int result = instance.compareAge(instance.student, instance.student2);
         assertEquals(expResult, result);
        
     }
     
+    public void testCompareAge2() {
+        System.out.println("compareAge");
+        CollectClass instance = new CollectClass();
+        instance.student.put("YOB", "1745");
+        instance.student2.put("YOB", "1780");
+        int expResult = 1745;
+        int result = instance.compareAge(instance.student, instance.student2);
+        assertEquals(expResult, result);
+       
+    }
+    
+    public void testCompareAge3() {
+        System.out.println("compareAge");
+        CollectClass instance = new CollectClass();
+        instance.student.put("YOB", "1921");
+        instance.student2.put("YOB", "1954");
+        int expResult = 1921;
+        int result = instance.compareAge(instance.student, instance.student2);
+        assertEquals(expResult, result);
+       
+    }
 }
