@@ -34,7 +34,8 @@ public class App {
         out = System.out;
         while(true){
             read();
-            if(finsh()) break;
+            if(finsh()) 
+                break;
             solve();
             write();
         }

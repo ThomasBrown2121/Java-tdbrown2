@@ -13,7 +13,7 @@ package edu.coloradomesa.cs310;
  */
 public class App {
     
-        private String who = "World";
+    private String who = "World";
 
     /**
      * Get the value of string

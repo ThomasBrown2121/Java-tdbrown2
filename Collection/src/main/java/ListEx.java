@@ -16,16 +16,16 @@ import java.util.LinkedList;
 public class ListEx {
     PrintStream out = System.out;
     LinkedList<String> lls = new LinkedList<String>();
-    void listOfStrings(){
+    void listOfStrings() {
         var lls = new ArrayList<String>();
         lls.add("alice");
         lls.add("bob");
         
-        for(var name : lls){
+        for (var name : lls) {
             out.println(name);
-        }
+         }
         
-        lls.forEach((name) -> { out.println(name); });// 
+        lls.forEach((name) -> { out.println(name); });
         
         lls.sort((a,b) -> -a.toLowerCase().compareTo(b.toLowerCase()));
     }
