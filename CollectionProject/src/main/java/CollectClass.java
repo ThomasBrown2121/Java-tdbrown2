@@ -17,76 +17,59 @@ import java.util.Scanner;
 public class CollectClass
 {
     Scanner Sc = new Scanner(System.in);
-    Map < String, Integer > mic = new HashMap < String, Integer > ();
-    String name = " ";
-    int rate;
-    
-    
-    CollectClass()
-    {
-        this.mic.put("Toyota", 3);
-        this.mic.put("Chevy", 6);
-        this.mic.put("Ford", 2);
-        this.mic.put("Honda", 5);
-        this.mic.put("Hyundai", 1);
-        this.mic.put("Nissan", 8);
-        this.mic.put("Subaru", 4);
-        this.mic.put("BMW", 11);
-        this.mic.put("Audi", 9);
-        this.mic.put("Acura", 7);
-        this.mic.put("Cadillac", 10);
-         
-    }
-    
-    
-    
-    public void run()
-    {
-        while(!false)
-        {
-            System.out.println("Please enter in your"
-                    + " favorite car brand" );
-            readIn();
-            if(finished())
-            {
-                break;
-            }
-            draft();
-            Builder();
-        
-        }
-    }
-    
-    boolean finished()
-    {
-        return "finished".equals(name);
-    }
-    
-    void readIn()
-    {
-        name = Sc.nextLine();
-    }
-    void Builder()
-    {
-        System.out.println(rate);
-    }
-    
-    void draft()
-    {
-        if(mic.containsKey(name))
-        {
-        System.out.println("Your car placement is: ");
-        rate = mic.get(name);
-        }
-        else
-        {
-        System.out.println("Key: "  + name + "not in list of car brands");
-        }
-    }
+    // initializing of Map
+    Map < String, String > student = new HashMap <String, String> ();
+    Map < String, String > student2 = new HashMap <String, String> ();
+
+    String Name;
+    String Age;
+    String YOB;
+    String State;
     
     public static void main(String args [])
     {
-      CollectClass col = new CollectClass();
-      col.run();
+      CollectClass obj = new CollectClass();
+      obj.run();
+    }
+
+    private void run() {
+        
+        System.out.println("Please enter the first person in order by name, age, year you were "
+                + " born, and state you reside in as for example: Co");
+        Name = Sc.nextLine();
+        student.put("Name", Name);
+        Age = Sc.nextLine();
+        student.put("Age", Age);
+        YOB = Sc.nextLine();
+        student.put("YOB", YOB);
+        State = Sc.nextLine();
+        student.put("State", State);
+        
+        System.out.println("Please enter the second person in order by name, age, year you were "
+                + " born, and state you reside in as for example: Co");
+        Name = Sc.nextLine();
+        this.student2.put("Name", Name);
+        Age = Sc.nextLine();
+        this.student2.put("Age", Age);
+        YOB = Sc.nextLine();
+        this.student2.put("YOB", YOB);
+        State = Sc.nextLine();
+        this.student2.put("State", State);
+        
+        if(Integer.parseInt(student.get("YOB")) == compareAge(this.student, this.student2))
+        {
+            System.out.println("First person is older");
+        }
+        else
+            System.out.println("Second person is older");
+    }
+
+    public int compareAge(Map < String, String > student, Map < String, String > student2) {
+        if(Integer.parseInt(student.get("YOB")) < Integer.parseInt(student2.get("YOB")))
+        {
+            return Integer.parseInt(student.get("YOB"));
+        }
+        else
+            return Integer.parseInt(student2.get("YOB"));
     }
 }
