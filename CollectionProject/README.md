@@ -5,4 +5,4 @@ This program compares the ages between two people returning the older person out
 Initializing the data as String including the Name, Age, YOB, and State information. Main was created to envoke the method obj.run(). The function run() takes in the data inputted by user and stores it into each desired value keyed to it. The if statement is envoked to do a comparison between each person YOB envoking the function compareAge().
 
 ## Screenshot
-![CollectionTestPass.png](CollectionTestPass.png)
+![CollectionTestPass.png](CollectionTestPass.PNG)
